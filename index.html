@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Квест 7 октября — доски станций</title>
+<style>
+html,body{margin:0;height:100%;background:#f4f6f9;color:#16181d;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{min-height:100%;box-sizing:border-box;padding:4vh 4vw;display:flex;flex-direction:column;gap:3vh}
+h1{margin:0;font-size:clamp(28px,4.2vw,72px);line-height:1.05}
+.sub{font-size:clamp(16px,1.8vw,30px);color:#5b6270}
+.grid{flex:1;display:grid;grid-template-columns:repeat(2,1fr);gap:2.5vw}
+a.st{display:flex;flex-direction:column;justify-content:center;gap:1vh;text-decoration:none;color:#16181d;background:#fff;border-radius:28px;padding:3vh 3vw;border-top:14px solid var(--k);box-shadow:0 2px 0 rgba(0,0,0,.06)}
+a.st:active{transform:scale(.98)}
+.rm{font-size:clamp(18px,2.2vw,40px);color:#5b6270;font-weight:600}
+.nm{font-size:clamp(28px,4vw,76px);font-weight:800;line-height:1.05}
+.net{font-size:clamp(14px,1.5vw,26px);padding:1.2vh 1.6vw;border-radius:14px;background:#e6f2ea;color:#1e5b35}
+.net.off{background:#fde8e6;color:#8a1c12}
+@media (max-width:700px){.grid{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<div><h1>Квест 7 октября — доски станций</h1><div class="sub">Нажмите на станцию своего кабинета</div></div>
+<div class="grid">
+  <a class="st" style="--k:#8a5cd6" href="https://d1-d57.github.io/kvest-57/chernyj-yashik-doska.html"><span class="rm">каб. 29</span><span class="nm">Чёрный ящик</span></a>
+  <a class="st" style="--k:#2e8b57" href="https://d1-d57.github.io/kvest-57/fraktalnaya-laboratoriya-doska.html"><span class="rm">каб. 30</span><span class="nm">Фрактальная лаборатория</span></a>
+  <a class="st" style="--k:#e08a2a" href="https://d1-d57.github.io/kvest-57/tajnopis-doska-v2.html"><span class="rm">каб. 32</span><span class="nm">Тайнопись</span></a>
+  <a class="st" style="--k:#2f6fd0" href="https://d1-d57.github.io/kvest-57/derevo-pifagora-doska.html"><span class="rm">каб. 33</span><span class="nm">Дерево Пифагора</span></a>
+</div>
+<div class="net" id="net">Доски открываются из интернета: d1-d57.github.io/kvest-57</div>
+</div>
+<script>
+(function(){var n=document.getElementById('net');function u(){if(!navigator.onLine){n.className='net off';n.textContent='Нет интернета — откройте файл доски с флешки или рабочего стола';}else{n.className='net';n.textContent='Доски открываются из интернета: d1-d57.github.io/kvest-57';}}
+window.addEventListener('online',u);window.addEventListener('offline',u);u();})();
+</script>
+</body></html>
