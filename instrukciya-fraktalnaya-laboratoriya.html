@@ -1,36 +1,42 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Фрактальная лаборатория — проводящим</title><style>
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&family=Inter:wght@400;500;600;700&display=swap');
-:root{--g:#2d7a46;--gs:#e6f2ea;--gw:#d6eadc;--b:#e5ecf7;--ink:#16181d;--mute:#5b6270;--red:#c0392b;--hl:#fff1c7}
+:root{--g:#2b7a47;--gs:#e7f2ea;--gw:#d4e9da;--b:#e6ecf6;--ink:#16181d;--mute:#5b6270;--red:#c0392b}
 *{box-sizing:border-box}html,body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
-.pg{display:grid;grid-template-columns:auto 1fr;gap:2.4vw;padding:2.5vh 2.5vw;height:100vh}
-.L{height:calc(100vh - 5vh);display:flex;align-items:flex-start}.L img{height:100%;width:auto;max-width:44vw;object-fit:contain}
-.R{display:flex;flex-direction:column;gap:1.3vh;min-width:0}
-.ey{font-family:Unbounded,Inter,sans-serif;font-weight:700;letter-spacing:.14em;font-size:clamp(11px,.95vw,17px);color:var(--g);text-transform:uppercase}
-h1{font-family:Unbounded,Inter,sans-serif;font-weight:800;margin:0;font-size:clamp(30px,3.6vw,68px);line-height:1}
-.room{font-weight:700;font-size:clamp(15px,1.3vw,24px)}.ppl{color:var(--mute);font-size:clamp(14px,1.2vw,22px)}
-.goal{background:var(--gs);border-radius:2vw;padding:1.4vh 1.5vw}.goal b{font-family:Unbounded,Inter,sans-serif;font-weight:800;font-size:clamp(17px,1.65vw,31px);line-height:1.15;display:block}
-.goal span{display:block;margin-top:.6vh;font-size:clamp(14px,1.15vw,21px)}
-h2{font-family:Unbounded,Inter,sans-serif;font-weight:700;letter-spacing:.12em;font-size:clamp(11px,.9vw,16px);margin:0 0 .7vh;color:#333;text-transform:uppercase}
-.cls{display:grid;grid-template-columns:repeat(3,1fr);gap:.8vw}.cl{background:var(--b);border-radius:1.2vw;padding:1vh 1vw}
-.cl b{font-family:Unbounded,Inter,sans-serif;font-weight:800;font-size:clamp(16px,1.5vw,28px);display:block}
-.cl i{font-style:normal;font-family:Unbounded,Inter,sans-serif;font-weight:800;color:var(--g);font-size:clamp(16px,1.5vw,28px);display:block;text-transform:uppercase}
-.cl small{color:var(--mute);font-size:clamp(12px,.95vw,17px)}
-.tlw{position:relative;padding-top:2.6vh}.alarm{position:absolute;top:0;left:73.5%;color:var(--red);font-weight:700;font-size:clamp(12px,.95vw,17px);border-left:2px solid var(--red);padding-left:.4vw;height:3.2vh}
-.tl{display:grid;grid-template-columns:2fr 2.6fr 6.4fr 4.2fr 2fr;gap:.35vw}.tl div{background:var(--b);border-radius:.8vw;padding:.8vh .6vw;font-size:clamp(12px,1vw,18px)}
-.tl div b{font-family:Unbounded,Inter,sans-serif;display:block;color:var(--g);font-size:1.1em}.tl .w{background:var(--gw)}
-.note{color:var(--mute);font-size:clamp(12px,.98vw,18px);margin-top:.6vh}.note.r{color:var(--red);font-weight:600}
-ul{margin:0;padding-left:1.1em;font-size:clamp(14px,1.06vw,20px);line-height:1.26}li{margin:.3vh 0}li::marker{color:var(--g)}
-.hl{background:var(--hl);border-radius:4px;padding:0 .2em}
-.nav{display:flex;gap:.8vw;flex-wrap:wrap}.nav a{font-weight:700;text-decoration:none;border-radius:10px;padding:.7vh 1vw;font-size:clamp(13px,1vw,18px);background:var(--ink);color:#fff}.nav a.alt{background:var(--b);color:var(--ink)}
-@media (max-width:900px){.pg{grid-template-columns:1fr;height:auto}.L{height:auto}.L img{max-width:100%;height:auto;width:100%}}
+.u{font-family:Unbounded,Inter,sans-serif}
+.ey{font-family:Unbounded,Inter,sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g)}
+h2{font-family:Unbounded,Inter,sans-serif;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#333;margin:0}
+a{color:inherit}
+
+.pg{display:grid;grid-template-columns:auto 1fr;gap:min(2.083vw,3.704vh);padding:min(1.562vw,2.778vh) min(2.083vw,3.704vh);height:100vh;overflow:hidden}
+.L img{height:calc(100vh - 2*min(1.562vw,2.778vh));width:auto;max-width:44vw;object-fit:contain;object-position:top}
+.R{display:flex;flex-direction:column;gap:min(1.146vw,2.037vh);min-width:0}
+.top{display:flex;justify-content:space-between;align-items:center;gap:1vw}
+.ey{font-size:min(0.885vw,1.574vh)}
+.nav{display:flex;gap:min(0.521vw,0.926vh)}.nav a{font-size:min(0.781vw,1.389vh);font-weight:600;text-decoration:none;background:var(--b);border-radius:min(0.521vw,0.926vh);padding:min(0.312vw,0.556vh) min(0.625vw,1.111vh)}
+h1{font-family:Unbounded,Inter,sans-serif;font-weight:800;margin:0;font-size:min(3.333vw,5.926vh);line-height:1}
+.room{font-weight:700;font-size:min(1.094vw,1.944vh)}.ppl{color:var(--mute);font-size:min(0.990vw,1.759vh)}
+.goal{background:var(--gs);border-radius:min(1.354vw,2.407vh);padding:min(0.938vw,1.667vh) min(1.250vw,2.222vh)}.goal b{font-family:Unbounded,Inter,sans-serif;font-weight:800;font-size:min(1.458vw,2.593vh);line-height:1.2;display:block}
+.goal span{display:block;margin-top:min(0.417vw,0.741vh);font-size:min(0.938vw,1.667vh)}
+h2{font-size:min(0.781vw,1.389vh);margin-bottom:min(0.417vw,0.741vh)}
+.cls{display:grid;grid-template-columns:repeat(3,1fr);gap:min(0.625vw,1.111vh)}.cl{background:var(--b);border-radius:min(0.938vw,1.667vh);padding:min(0.625vw,1.111vh) min(0.833vw,1.481vh)}
+.cl b{font-family:Unbounded,Inter,sans-serif;font-weight:800;font-size:min(1.198vw,2.130vh);display:block}
+.cl i{font-style:normal;font-family:Unbounded,Inter,sans-serif;font-weight:800;color:var(--g);font-size:min(1.198vw,2.130vh);display:block;text-transform:uppercase}
+.cl small{color:var(--mute);font-size:min(0.729vw,1.296vh)}
+.tlw{position:relative;padding-top:min(1.354vw,2.407vh)}.al{position:absolute;top:0;left:73.6%;color:var(--red);font-weight:700;font-size:min(0.781vw,1.389vh);border-left:2px solid var(--red);padding-left:min(0.260vw,0.463vh);height:min(1.562vw,2.778vh)}
+.tl{display:grid;grid-template-columns:2fr 2.6fr 6.4fr 4.2fr 2fr;gap:min(0.260vw,0.463vh)}.tl div{background:var(--b);border-radius:min(0.625vw,1.111vh);padding:min(0.417vw,0.741vh) min(0.469vw,0.833vh);font-size:min(0.885vw,1.574vh)}
+.tl b{font-family:Unbounded,Inter,sans-serif;display:block;color:var(--g);font-size:min(0.885vw,1.574vh)}.tl .w{background:var(--gw)}
+.note{color:var(--mute);font-size:min(0.781vw,1.389vh);margin-top:min(0.312vw,0.556vh)}
+ul{margin:0;padding-left:1.1em;font-size:min(1.094vw,1.944vh);line-height:1.34}li{margin:min(0.156vw,0.278vh) 0}li::marker{color:var(--g)}
+@media (max-aspect-ratio:1/1){.pg{grid-template-columns:1fr;height:auto;overflow:visible}.L img{max-width:100%;width:100%;height:auto}
+ .pg *{font-size:revert}h1{font-size:34px}.goal b{font-size:19px}.cl b,.cl i{font-size:18px}.top{flex-wrap:wrap}}
 </style></head><body>
-<div class="pg"><div class="L"><img src="img/frakt-shagi.png" alt="Фрактальная лаборатория: как играют дети, по шагам"></div><div class="R">
-<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1vw"><div class="ey">Для проводящих · среда, 7 октября</div><div class="nav"><a href="fraktalnaya-laboratoriya-doska.html">Доска для детей →</a><a class="alt" href="index.html">Все станции</a></div></div>
-<h1>Фрактальная лаборатория</h1><div><div class="room">Каб. 30, 4 этаж</div><div class="ppl">Проводят: Алёна Николаевна Иванова, Елизавета О., Татьяна Ерохина и 7 волонтёров</div></div>
+<div class="pg"><div class="L"><img src="img/frakt-shagi.png" alt="Фрактальная лаборатория: как играют дети"></div><div class="R">
+<div class="top"><div class="ey">Для проводящих · среда, 7 октября</div><div class="nav"><a href="fraktalnaya-laboratoriya-doska.html">Доска для детей</a><a href="index.html">День целиком</a></div></div>
+<div><h1>Фрактальная лаборатория</h1><div class="room">Каб. 30, 4 этаж</div><div class="ppl">Проводят: Алёна Николаевна Иванова, Елизавета О., Татьяна Ерохина и 7 волонтёров</div></div>
 <div class="goal"><b>За 20 минут каждый класс собирает свой угол треугольника Серпинского</b></div>
 <div><h2>Классы</h2><div class="cls"><div class="cl"><b>13:45 · 5Г</b></div><div class="cl"><b>14:05 · 5А</b></div><div class="cl"><b>14:25 · 5Б</b></div></div></div>
-<div><h2>Круг — 20 минут</h2><div class="tlw"><div class="alarm">⏰ 15</div><div class="tl"><div><b>0–2</b>рассадка</div><div><b>2–5</b>правила</div><div class="w"><b>5–13</b>шаги 1–2: вырезаем, раскрашиваем, клеим</div><div class="w"><b>13–18</b>шаг 3: собираем угол</div><div><b>18–20</b>выход</div></div></div>
-<div class="note r">На 15-й минуте (14:00 · 14:20 · 14:40) заходят Ваня или Полина: «пять минут» — сворачиваемся, к 18-й класс уходит с сопровождающими. Старший ставит беззвучный будильник на :01 — страховка.</div></div>
-<div><h2>Как готовим · 13:10–13:40</h2><ul><li>Ватман из двух листов А0 склеен накануне</li><li><span class="hl">Подложки — акварельные треугольники, которые расписала Полина</span></li><li>На столы — треугольники для вырезания, подложки, фломастеры, карандаши, ножницы и клей</li><li>На электронной доске: ярлык «Квест-доски» на рабочем столе → станция → «Доска для детей»</li></ul></div>
-<div><h2>В конце</h2><ul><li>После 5Б несём треугольник в спортзал, на финале его увидят все классы</li><li>Потом повесим на 5 этаже, в кабинете пятого класса</li><li>После награждения — чай с пирогами</li></ul></div>
+<div><h2>Круг — 20 минут</h2><div class="tlw"><div class="al">⏰ 15</div><div class="tl"><div><b>0–2</b>рассадка</div><div><b>2–5</b>правила</div><div class="w"><b>5–13</b>шаги 1–2: вырезаем, раскрашиваем, клеим</div><div class="w"><b>13–18</b>шаг 3: собираем угол</div><div><b>18–20</b>выход</div></div></div>
+<div class="note">На 15-й минуте заходят Ваня или Полина: сворачиваемся, к 18-й класс уходит с сопровождающими</div></div>
+<div><h2>Как готовим</h2><ul><li>Ватман из двух листов А0 склеен накануне, подложки расписала Полина</li><li>На столы кладём треугольники для вырезания, подложки, фломастеры, карандаши, ножницы и клей</li></ul></div>
+<div><h2>В конце</h2><ul><li>После 5Б несём треугольник в спортзал, на финале его увидят все классы</li><li>Потом повесим на 5 этаже, в кабинете пятого класса</li></ul></div>
 </div></div></body></html>
