@@ -1,31 +1,45 @@
-<!doctype html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Квест 7 октября — доски станций</title>
-<style>
-html,body{margin:0;height:100%;background:#f4f6f9;color:#16181d;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
-.wrap{min-height:100%;box-sizing:border-box;padding:4vh 4vw;display:flex;flex-direction:column;gap:3vh}
-h1{margin:0;font-size:clamp(28px,4.2vw,72px);line-height:1.05}
-.sub{font-size:clamp(16px,1.8vw,30px);color:#5b6270}
-.grid{flex:1;display:grid;grid-template-columns:repeat(2,1fr);gap:2.5vw}
-a.st{display:flex;flex-direction:column;justify-content:center;gap:1vh;text-decoration:none;color:#16181d;background:#fff;border-radius:28px;padding:3vh 3vw;border-top:14px solid var(--k);box-shadow:0 2px 0 rgba(0,0,0,.06)}
-a.st:active{transform:scale(.98)}
-.rm{font-size:clamp(18px,2.2vw,40px);color:#5b6270;font-weight:600}
-.nm{font-size:clamp(28px,4vw,76px);font-weight:800;line-height:1.05}
-.net{font-size:clamp(14px,1.5vw,26px);padding:1.2vh 1.6vw;border-radius:14px;background:#e6f2ea;color:#1e5b35}
-.net.off{background:#fde8e6;color:#8a1c12}
-@media (max-width:700px){.grid{grid-template-columns:1fr}}
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Квест 7 октября — станции</title><style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#16181d;--mute:#5b6270;--soft:#e8eef7;--ok:#e6f2ea;--okink:#1e5b35;--red:#c0392b}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{max-width:1600px;margin:0 auto;padding:2.2vh 2.5vw;display:flex;flex-direction:column;gap:1.2vh}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:2vw;flex-wrap:wrap}
+.eyebrow{font-size:clamp(12px,1vw,18px);letter-spacing:.12em;text-transform:uppercase;color:var(--okink);font-weight:700}
+h1{margin:.2vh 0 0;font-size:clamp(28px,3.4vw,64px);line-height:1.02}
+.meta{font-size:clamp(15px,1.35vw,24px);color:var(--mute)}.meta b{color:var(--ink)}
+a.back{font-size:clamp(14px,1.2vw,20px);color:var(--okink);text-decoration:none;font-weight:700;white-space:nowrap}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:1.4vw}
+.box{background:var(--card);border-radius:18px;padding:1.4vh 1.4vw}
+.goal{background:var(--ok);border-radius:18px;padding:1.4vh 1.4vw;font-size:clamp(17px,1.6vw,30px);font-weight:800}
+.goal small{display:block;font-weight:400;font-size:.72em;color:var(--ink);margin-top:.4vh}
+h2{margin:0 0 .8vh;font-size:clamp(12px,1vw,18px);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.cls{display:grid;grid-template-columns:repeat(3,1fr);gap:.8vw}
+.cl{background:var(--soft);border-radius:14px;padding:.9vh .9vw;font-size:clamp(16px,1.5vw,28px);font-weight:800}
+.cl small{display:block;font-size:.62em;font-weight:600;color:var(--okink)}
+.tl{display:grid;grid-template-columns:2fr 3fr 8fr 5fr 2fr;gap:.4vw}
+.tl div{background:var(--soft);border-radius:10px;padding:.7vh .6vw;font-size:clamp(12px,1vw,18px)}
+.tl div b{display:block;font-size:1.15em;color:var(--okink)}.tl .w{background:#d6eadc}
+.sig{margin-top:.6vh;font-size:clamp(13px,1.05vw,19px);color:var(--red);font-weight:700}
+ol,ul{margin:0;padding-left:1.2em;font-size:clamp(14px,1.02vw,21px);line-height:1.28}li{margin:.2vh 0}
+.new{background:#fff4d6;border-radius:6px;padding:0 .25em}
+.btns{display:flex;gap:1vw;flex-wrap:wrap}
+a.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;border-radius:12px;padding:1vh 1.4vw;font-weight:700;font-size:clamp(14px,1.2vw,22px)}
+a.btn.alt{background:var(--soft);color:var(--ink)}
+@media (max-width:900px){.cols{grid-template-columns:1fr}.tl{grid-template-columns:1fr 1fr}.cls{grid-template-columns:1fr}}
 </style></head><body><div class="wrap">
-<div><h1>Квест 7 октября — доски станций</h1><div class="sub">Нажмите на станцию своего кабинета</div></div>
-<div class="grid">
-  <a class="st" style="--k:#8a5cd6" href="https://d1-d57.github.io/kvest-57/chernyj-yashik-doska.html"><span class="rm">каб. 29</span><span class="nm">Чёрный ящик</span></a>
-  <a class="st" style="--k:#2e8b57" href="https://d1-d57.github.io/kvest-57/fraktalnaya-laboratoriya-doska.html"><span class="rm">каб. 30</span><span class="nm">Фрактальная лаборатория</span></a>
-  <a class="st" style="--k:#e08a2a" href="https://d1-d57.github.io/kvest-57/tajnopis-doska-v2.html"><span class="rm">каб. 32</span><span class="nm">Тайнопись</span></a>
-  <a class="st" style="--k:#2f6fd0" href="https://d1-d57.github.io/kvest-57/derevo-pifagora-doska.html"><span class="rm">каб. 33</span><span class="nm">Дерево Пифагора</span></a>
-</div>
-<div class="net" id="net">Доски открываются из интернета: d1-d57.github.io/kvest-57</div>
-</div>
-<script>
-(function(){var n=document.getElementById('net');function u(){if(!navigator.onLine){n.className='net off';n.textContent='Нет интернета — откройте файл доски с флешки или рабочего стола';}else{n.className='net';n.textContent='Доски открываются из интернета: d1-d57.github.io/kvest-57';}}
-window.addEventListener('online',u);window.addEventListener('offline',u);u();})();
-</script>
+<div><div class="eyebrow">Квест «Общий знаменатель» · среда, 7 октября</div><h1>Станции и расписание</h1></div>
+<div class="cols"><div class="box"><h2>День</h2><ul><li><b>12:30</b> — Сбор взрослых — психологический каб. 34 (4 этаж, сразу у лестницы направо). Чай</li><li><b>12:45</b> — Общий брифинг: формат и тайминг</li><li><b>13:10</b> — Школьники-волонтёры приходят в кабинеты станций (до этого — актовый зал)</li><li><b>13:10–13:40</b> — Подготовка в кабинетах: парты, раздатка, доска, правила, одно задание «за ребёнка»</li><li><b>13:30</b> — Дети собираются в актовом зале</li><li><b>13:45 · 14:05 · 14:25</b> — Три круга по 20 минут, без перерыва</li><li><b>14:45</b> — Финал — спортзал, 1 этаж</li><li><b>после</b> — Чай с пирогами</li></ul></div>
+<div class="box"><h2>Круг — 20 минут</h2><div class="tl"><div><b>0–2</b>рассадка</div><div><b>2–5</b>правила</div><div class="w"><b>5–13</b>квест</div><div class="w"><b>13–18</b>собираем общий объект</div><div><b>18–20</b>выход</div></div><div class="sig">⏰ 15-я минута (14:00 · 14:20 · 14:40): заходят Ваня или Полина — «пять минут». Старший ставит беззвучный будильник на :01 как страховку. К 18-й класс уходит с сопровождающими.</div>
+<h2 style="margin-top:1.4vh">Ходят по станциям</h2><ul><li>Ваня Яковлев — 29 и 32</li><li>Полина Романова — 30 и 33</li><li>Не знаешь, что делать, — спроси в своём кабинете: там всегда двое взрослых</li></ul></div></div>
+<div class="cols"><div class="box" style="border-top:12px solid #8a5cd6"><div class="meta"><b>каб. 29</b></div>
+<div style="font-size:clamp(22px,2.4vw,44px);font-weight:800;margin:.4vh 0">Чёрный ящик</div><div class="meta">Миша Зеленов, Ксения Шаляпина</div>
+<div class="btns" style="margin-top:1vh"><a class="btn" href="chernyj-yashik-doska.html">Доска для детей</a><a class="btn alt" href="instrukciya-chernyj-yashik.html">Инструкция проводящим</a></div></div><div class="box" style="border-top:12px solid #2e8b57"><div class="meta"><b>каб. 30</b></div>
+<div style="font-size:clamp(22px,2.4vw,44px);font-weight:800;margin:.4vh 0">Фрактальная лаборатория</div><div class="meta">Алёна Н. Иванова, Елизавета О., Татьяна Ерохина</div>
+<div class="btns" style="margin-top:1vh"><a class="btn" href="fraktalnaya-laboratoriya-doska.html">Доска для детей</a><a class="btn alt" href="instrukciya-fraktalnaya-laboratoriya.html">Инструкция проводящим</a></div></div><div class="box" style="border-top:12px solid #e08a2a"><div class="meta"><b>каб. 32</b></div>
+<div style="font-size:clamp(22px,2.4vw,44px);font-weight:800;margin:.4vh 0">Тайнопись</div><div class="meta">Григорий Тархов, Михаил Столяров</div>
+<div class="btns" style="margin-top:1vh"><a class="btn" href="tajnopis-doska-v2.html">Доска для детей</a><a class="btn alt" href="instrukciya-tajnopis.html">Инструкция проводящим</a></div></div><div class="box" style="border-top:12px solid #2f6fd0"><div class="meta"><b>каб. 33</b></div>
+<div style="font-size:clamp(22px,2.4vw,44px);font-weight:800;margin:.4vh 0">Дерево Пифагора</div><div class="meta">Миша Ильинский, Екатерина Васильева, Полина Старостина</div>
+<div class="btns" style="margin-top:1vh"><a class="btn" href="derevo-pifagora-doska.html">Доска для детей</a><a class="btn alt" href="instrukciya-derevo-pifagora.html">Инструкция проводящим</a></div></div></div>
+<div class="meta" id="net">Доски открываются из интернета: d1-d57.github.io/kvest-57</div>
+</div><script>(function(){var n=document.getElementById('net');function u(){n.textContent=navigator.onLine?'Доски открываются из интернета: d1-d57.github.io/kvest-57':'Нет интернета — откройте файл доски с флешки или рабочего стола';}addEventListener('online',u);addEventListener('offline',u);u();})();</script>
 </body></html>
